@@ -33,8 +33,9 @@ class ToyotaCar(Car):
                 print("fast")
 
 class TeslaCar(Car):
-        def __init__(self,model="Model S",enable_autrun=True):
-                super().__init__(model)
+        def __init__(self,model="Model S",enable_autorun=False):
+        super().__init__(model)
+        self.enable_autorun = enable_autorun
 
         def run(self):
                 print("super fast")
@@ -68,7 +69,7 @@ class TeslaCar(Car):
                 print("run"+self.speed)
 
 teslacar=TeslaCar("dfljk","fast")
-print("_________")
+print(f'{"-"*10}')
 teslacar.run()
 print(teslacar.model)
 
